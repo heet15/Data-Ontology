@@ -1,0 +1,45 @@
+Intradiem_Data
+-ACD
+    - AgentStateSegment
+        - ConfiguredAgentState
+    - AgentStats
+    - QueueStats
+    - TimeInStateAggregateDaily
+-Actions
+    - ActionData
+    - VOActions
+        - VOTStaffing
+        - VTOStaffing
+-ActiveAssignmentCounter
+-Association
+    - AssociationDefination
+    - AssociationInstance
+-BusinessUnit
+-Event
+    - AttributeChnageEvent
+        - AttributeDefinationChangeEvent
+        - AttributeInstanceChangeEvent
+        - AttributeLookupInstanceChangeEvent
+    - InstanceMessageData
+        - InstantMessage
+        - InstantMesageRecipient
+    - TitleTrackEvent
+-Location
+-Threshold
+    - ThresholdData
+    - ThresholdDefination
+    - ThresholdKeySet
+    - ThresholdModel
+    - ThresholdSuggestedValue
+    - ThresholdTemplate
+    - ThresholdValue
+-User
+    - UserHistorical
+-WFM
+    - NetStaffingData
+        - NetStaffingWithAdjustments
+        - NetStaffingWithAdjustmentsCalc
+        - NetStaffingWithoutAdjustments
+        - NetStaffingWithoutAdjustmentsCalc
+    - Segment
+    - Shifts
