@@ -1,0 +1,402 @@
+@prefix : <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/> .
+
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update> rdf:type owl:Ontology ;
+                                                                           rdfs:comment "This is an ontology about Data lake" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update#triggers
+:triggers rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event> ;
+          rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions> ;
+          <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+          <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T20:26:18Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update#userAgentStateSegments
+:userAgentStateSegments rdf:type owl:ObjectProperty ;
+                        rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                        rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStateSegment> ;
+                        <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                        <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T20:30:42Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update#userTimeInStateData
+:userTimeInStateData rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                     rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/TimeInStateAggregateDaily> ;
+                     <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                     <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T20:28:38Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/associationBelongsToACD
+:associationBelongsToACD rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> ;
+                         rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> ;
+                         <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                         <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T16:25:37Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/associationBelongsToWFM
+:associationBelongsToWFM rdf:type owl:ObjectProperty ;
+                         rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> ;
+                         rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM> ;
+                         <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                         <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T16:24:57Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/associationbelongstoNetStaffing
+:associationbelongstoNetStaffing rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> ;
+                                 rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> ;
+                                 <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                 <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T17:48:37Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/belongsToAssociation
+:belongsToAssociation rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                      rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> ;
+                      <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                      <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T16:24:18Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/hasActiveAssignmentCounter
+:hasActiveAssignmentCounter rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                            rdfs:range :ActiveAssignmentCounter ;
+                            <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                            <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T17:42:26Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/hasAgentStats
+:hasAgentStats rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+               rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStats> ;
+               <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+               <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T17:45:27Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/hasSegment
+:hasSegment rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+            rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Segment> ;
+            <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+            <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T13:56:50Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/hasThreshold
+:hasThreshold rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions> ;
+              rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> ;
+              <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+              <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T13:59:02Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/isAssignedTo
+:isAssignedTo rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+              rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/BusinessUnit> ;
+              <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+              <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T13:32:46Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/shiftAllocated
+:shiftAllocated rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Shifts> ;
+                <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T13:41:13Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/worksAtLocation
+:worksAtLocation rdf:type owl:ObjectProperty ;
+                 rdfs:domain <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                 rdfs:range <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Location> ;
+                 <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                 <http://purl.org/dc/elements/1.1/date>%20"2023-10-17T13:34:40Z"^^xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                       <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                       <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:04:57Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ActionData
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ActionData> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions> ;
+                                                                              <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                              <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:12:40Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                           <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                           <http://purl.org/dc/elements/1.1/date>%20"2023-10-16T13:30:09Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStateSegment
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStateSegment> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> ;
+                                                                                     <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                     <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:05:18Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStats
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStats> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> ;
+                                                                              <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                              <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:05:08Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AssociationDefinition
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AssociationDefinition> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AssociationInstance
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AssociationInstance> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Association> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeChangeEvent
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeChangeEvent> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeDefinitionChangeEvent
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeDefinitionChangeEvent> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeChangeEvent> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeInstanceChangeEvent
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeInstanceChangeEvent> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeChangeEvent> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeLookupInstanceChangeEvent
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeLookupInstanceChangeEvent> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AttributeChangeEvent> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/BusinessUnit
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/BusinessUnit> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                                <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:50:35Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ConfiguredAgentState
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ConfiguredAgentState> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/AgentStateSegment> ;
+                                                                                        <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                        <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:05:32Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                         <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                         <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:48:31Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessage
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessage> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageData> ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                  <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:55:41Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageData
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageData> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageRecipient
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageRecipient> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/InstantMessageData> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Location
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Location> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                            <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                            <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:50:57Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithAdjustments
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithAdjustments> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithoutAdjustments
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithoutAdjustments> rdf:type owl:Class ;
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithoutAdjustmentsCalc
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingWithoutAdjustmentsCalc> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> ;
+                                                                                                     <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                                     <http://purl.org/dc/elements/1.1/date>%20"2023-10-12T20:43:51Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingwithAdjustmentsCalc
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingwithAdjustmentsCalc> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/NetStaffingData> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/QueueStats
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/QueueStats> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Segment
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Segment> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Shifts
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Shifts> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdData
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdData> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> ;
+                                                                                 <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                 <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T21:08:13Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdDefinition
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdDefinition> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdKeySet
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdKeySet> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdModel
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdModel> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdSuggestedValue
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdSuggestedValue> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdTemplate
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdTemplate> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdValue
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ThresholdValue> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Threshold> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/TimeInStateAggregateDaily
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/TimeInStateAggregateDaily> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/ACD> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/TitleTrackEvent
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/TitleTrackEvent> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Event> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                        <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                        <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:49:56Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/UserHistorical
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/UserHistorical> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/User> ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                                  <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:50:48Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOActions
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOActions> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Actions> ;
+                                                                             <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                             <http://purl.org/dc/elements/1.1/date>%20"2023-10-11T20:51:46Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOTStaffing
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOTStaffing> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOActions> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VTOStaffing
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VTOStaffing> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/VOActions> .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM
+<http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/WFM> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                                                                       <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                                                                       <http://purl.org/dc/elements/1.1/date>%20"2023-10-16T13:26:56Z"^^xsd:dateTime .
+
+
+###  http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake_update/ActiveAssignmentCounter
+:ActiveAssignmentCounter rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.semanticweb.org/heet.patel/ontologies/2023/8/DataLake/Intradiem_Data> ;
+                         <http://purl.org/dc/elements/1.1/creator>%20"heet.patel" ;
+                         <http://purl.org/dc/elements/1.1/date>%20"2023-10-16T13:51:47Z"^^xsd:dateTime .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
